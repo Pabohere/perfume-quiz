@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A considered, personal way to discover your next fragrance." />
+  <title>Vela — Find your scent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <main id="app">
+    <section id="landing" class="page landing">
+      <nav><a class="wordmark" href="#">Vela<span>·</span></a><span class="nav-note">Personal fragrance discovery</span><a class="nav-link" href="#how-it-works">How it works</a></nav>
+      <div class="landing-copy">
+        <p class="eyebrow">A quieter way to choose fragrance</p>
+        <h1>Find the scent<br><em>that feels like you.</em></h1>
+        <p class="lede">A thoughtful, nine-question consultation that looks beyond notes—at the opening, the dry-down, and how a scent lives on your skin.</p>
+        <button class="button primary start">Begin your discovery <span>→</span></button>
+        <p class="small-note">No account needed · Takes about 2 minutes</p>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="halo"></div><div class="bottle"><div class="cap"></div><div class="label">VELA<br><small>EAU DE PARFUM</small></div></div><p>CLARITY<br>&amp; SKIN</p></div>
+      <div id="how-it-works" class="steps"><span>01 <b>Tell us the feeling</b></span><span>02 <b>Refine the details</b></span><span>03 <b>Meet your matches</b></span></div>
+    </section>
+
+    <section id="quiz" class="page quiz hidden" aria-live="polite">
+      <header class="quiz-header"><button id="exitQuiz" class="text-button">← Exit</button><a class="wordmark" href="#">Vela<span>·</span></a><span id="stepLabel" class="step-label"></span></header>
+      <div class="progress"><i id="progressBar"></i></div>
+      <div class="quiz-inner"><p id="questionKicker" class="eyebrow"></p><h2 id="questionTitle"></h2><p id="questionHelp" class="question-help"></p><div id="options" class="options"></div><div id="budgetControls" class="budget-controls hidden"></div></div>
+      <footer class="quiz-footer"><button id="back" class="text-button">← Back</button><button id="next" class="button primary" disabled>Continue <span>→</span></button></footer>
+    </section>
+
+    <section id="results" class="page results hidden">
+      <nav><a class="wordmark" href="#">Vela<span>·</span></a><button id="restart" class="text-button">Retake quiz ↻</button></nav>
+      <header class="results-hero"><p class="eyebrow">Your scent profile</p><h1 id="profileTitle"></h1><p id="profileText" class="lede"></p><div id="profileTags" class="tags"></div></header>
+      <section class="profile-grid"><div><p class="section-label">You’ll probably love</p><div id="loves" class="chips"></div></div><div><p class="section-label">Approach with care</p><div id="cautions" class="chips caution"></div></div><div><p class="section-label">Your ideal trail</p><p id="performanceCopy" class="body-copy"></p></div></section>
+      <section class="recommendations"><div class="section-heading"><div><p class="eyebrow">Your considered matches</p><h2>Start with these.</h2></div><p>Ranked from your answers—not popularity.</p></div><div id="recommendationList"></div></section>
+      <section class="sample-section"><div><p class="eyebrow">A simple next step</p><h2>Sample before you commit.</h2></div><p>Wear each choice on skin. Notice the first ten minutes, then revisit it after an hour—your favourite part of a perfume may be waiting in its dry-down.</p><button class="button dark" id="copyShortlist">Copy my sample shortlist</button></section>
+      <footer class="site-footer">Vela is an independent fragrance discovery tool. Performance and scent perception vary by skin, climate, and formulation.</footer>
+    </section>
+  </main>
+  <template id="recommendationTemplate"><article class="recommendation-card"><div class="rank"></div><div class="rec-main"><div class="rec-top"><p class="brand"></p><span class="match"></span></div><h3></h3><p class="family"></p><p class="reason"></p><button class="details-toggle">See scent journey <span>+</span></button><div class="details hidden"><div><b>Opening</b><p class="opening"></p></div><div><b>Dry-down</b><p class="drydown"></p></div><div><b>Wear</b><p class="wear"></p></div><div><b>Worth knowing</b><p class="caveat"></p></div></div></div></article></template>
+  <script src="app.js"></script>
+</body>
+</html>
