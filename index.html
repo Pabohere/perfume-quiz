@@ -12,6 +12,7 @@
 </head>
 <body>
   <div class="grain"></div>
+  <div class="scent-cloud cloud-rose"></div><div class="scent-cloud cloud-amber"></div><div class="scent-cloud cloud-moss"></div>
   <main id="app">
     <section id="landing" class="page landing">
       <nav><a class="wordmark" href="#">Vela<span>·</span></a><span class="nav-note">Personal fragrance discovery</span><a class="nav-link" href="#how-it-works">How it works</a></nav>
@@ -31,6 +32,10 @@
       <div class="progress"><i id="progressBar"></i></div>
       <div class="quiz-inner"><p id="questionKicker" class="eyebrow"></p><h2 id="questionTitle"></h2><p id="questionHelp" class="question-help"></p><div id="options" class="options"></div><div id="budgetControls" class="budget-controls hidden"></div></div>
       <footer class="quiz-footer"><button id="back" class="text-button">← Back</button><button id="next" class="button primary" disabled>Continue <span>→</span></button></footer>
+    </section>
+
+    <section id="distillation" class="page distillation hidden" aria-live="polite">
+      <div class="distill-copy"><p class="eyebrow">Your scent report is taking shape</p><h2>Distilling your<br><em>perfect match.</em></h2><div class="distill-bottle"><i></i><span></span></div><p class="distill-status">Balancing the opening with the dry-down…</p></div>
     </section>
 
     <section id="results" class="page results hidden">
