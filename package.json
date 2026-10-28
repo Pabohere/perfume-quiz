@@ -1,0 +1,9 @@
+{
+  "name": "vela-perfume-quiz",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A zero-dependency local server for the Vela perfume discovery quiz.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

@@ -4,7 +4,13 @@ A polished, no-build-step fragrance discovery MVP. It runs entirely in the brows
 
 ## Run locally
 
-Open `index.html` in a browser, or use the VS Code Live Server extension.
+Run the following in the project folder, then visit `http://localhost:3000`:
+
+```powershell
+npm start
+```
+
+No package installation is needed. You can also open `index.html` directly or use the VS Code Live Server extension.
 
 ## What’s included
 
